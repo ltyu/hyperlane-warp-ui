@@ -1,4 +1,5 @@
 import { ChainMap, ChainMetadata } from '@hyperlane-xyz/sdk';
+import { ProtocolType } from '@hyperlane-xyz/utils';
 
 // A map of chain names to ChainMetadata
 // Chains can be defined here, in chains.json, or in chains.yaml
@@ -28,4 +29,14 @@ export const chains: ChainMap<ChainMetadata & { mailbox?: Address }> = {
   //   },
   //   logoURI: '/logo.svg',
   // },
+  'artio': {
+    name: 'artio',
+    chainId: 80085,
+    domainId: 80085,
+    protocol: ProtocolType.Ethereum,
+    rpcUrls: [
+      { http: 'https://artio.rpc.berachain.com/' }
+    ],
+    logoURI: '/logos/Berachain_Black.png',
+  }
 };
