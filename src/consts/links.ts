@@ -8,4 +8,5 @@ export const links = {
   chains: 'https://docs.hyperlane.xyz/docs/resources/domains',
   twitter: 'https://twitter.com/hyperlane_xyz',
   blog: 'https://medium.com/hyperlane',
+  uniswapTokens: `https://app.uniswap.org/explore/tokens`,
 };

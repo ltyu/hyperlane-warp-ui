@@ -22,6 +22,7 @@ import { useRouteChains } from '../routes/hooks';
 import { RoutesMap, WarpRoute } from '../routes/types';
 import { getTokenRoute, isIbcOnlyRoute } from '../routes/utils';
 import { useStore } from '../store';
+import { SwapInlineText } from '../swap/SwapInlineText';
 import { SelectOrInputTokenIds } from '../tokens/SelectOrInputTokenIds';
 import { TokenSelectField } from '../tokens/TokenSelectField';
 import { useIsApproveRequired } from '../tokens/approval';
@@ -149,12 +150,20 @@ function TokenSection({
   isReview: boolean;
 }) {
   const { values } = useFormikContext<TransferFormValues>();
-
+  const chain = getChainDisplayName(values.originCaip2Id).toLowerCase();
+  const tokenAddress = getToken(values.tokenCaip19Id)?.routerAddress;
   return (
     <div className="flex-1">
-      <label htmlFor="tokenCaip19Id" className="block uppercase text-sm text-gray-500 pl-0.5">
-        Token
-      </label>
+      <div className="flex justify-between pr-1">
+        <label htmlFor="tokenCaip19Id" className="block uppercase text-sm text-gray-500 pl-0.5">
+          Token
+        </label>
+        {tokenAddress ? (
+          <SwapInlineText chain={chain} tokenAddress={tokenAddress}></SwapInlineText>
+        ) : (
+          ''
+        )}
+      </div>
       <TokenSelectField
         name="tokenCaip19Id"
         originCaip2Id={values.originCaip2Id}
