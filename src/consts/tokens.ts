@@ -5,12 +5,12 @@ import { WarpTokenConfig } from '../features/tokens/types';
 // The input here is typically the output of the Hyperlane CLI warp deploy command
 export const tokenList: WarpTokenConfig = [
   {
-    chainId: 137,
-    name: 'Sepolia Ether',
-    symbol: 'SEP-ETH',
+    chainId: 80085, 
+    name: 'Artio Bera',
+    symbol: 'BERA',
     decimals: 18,
     type: 'native',
-    hypNativeAddress: '0x8D519984EaAB43341Ee52fAB7f8102B445DAF747',
-    logoURI: '/logos/weth.png', // See public/logos/
+    hypNativeAddress: '0x1e61Eec27bdb28b23D7F9DcBea828F622BDC4504',
+    logoURI: '/logos/Berachain_Black.png', // See public/logos/
   },
 ];

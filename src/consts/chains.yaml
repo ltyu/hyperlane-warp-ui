@@ -18,3 +18,17 @@
 #   protocol: ethereum
 #   rpcUrls:
 #     - http: http://127.0.0.1:8555
+artio:
+  name: artio
+  chainId: 80085
+  domainId: 80085
+  protocol: ethereum
+  rpcUrls:
+    - http: 'https://artio.rpc.berachain.com'
+  nativeToken:
+    name: BERA # String
+    symbol: BERA # String
+    decimals: 18 # Number
+  blocks:
+    confirmations: 1 # Number: Blocks to wait before considering a transaction confirmed
+  logoURI: /logos/BERA.svg
