@@ -1,18 +1,11 @@
-# Hyperlane Warp Route UI Template
+Testnet Dex
 
-This repo contains an example web interface for interchain tokens built with [Hyperlane Warp Route](https://docs.hyperlane.xyz/docs/reference/applications/warp-routes). Warp is a framework to permisionlessly bridge tokens to any chain.
+## How to add your token to the token list
+1. [Deploy](https://docs.hyperlane.xyz/docs/guides/deploy-warp-route) a warp route from your chain to Arbitrum
+2. Submit pull request to update (token.js)[https://github.com/ltyu/hyperlane-warp-ui/blob/main/src/consts/tokens.ts]
+- A chain logo must bed added to `/public/logos`. It should be suffixed with `_chain`.
+- A token logo must be added to `/public/logos`. It must be suffixed with `_token`.
 
-## Architecture
-
-This app is built with Next+React, Wagmi, RainbowKit, and the Hyperlane SDK.
-
-- Constants that you may want to change are in `./src/consts/`, see the following Customization section for details.
-- The index page is located at `./src/pages/index.tsx`
-- The primary features are implemented in `./src/features/`
-
-## Customization
-
-See [CUSTOMIZE.md](./CUSTOMIZE.md) for details about adjusting the tokens and branding of this app.
 
 ## Development
 
