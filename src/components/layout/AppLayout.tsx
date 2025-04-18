@@ -23,6 +23,10 @@ export function AppLayout({ children }: PropsWithChildren) {
       <Head>
         {/* https://nextjs.org/docs/messages/no-document-viewport-meta */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="loadforge-site-verification"
+          content="f2e49ff42fe5f4a542cfa7b3f1f6fd7cc33069cd4349a3c936427c1506f1074ae1adb48ccb376ee39e3e78add6433fc236b3fa271016294ef520acc9f665c54e"
+        />
         <title>{APP_NAME}</title>
       </Head>
       <div
